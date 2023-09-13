@@ -15,11 +15,9 @@ $(document).ready(function () {
     }
   });
 
-  // $(".card").click(function (){
-
-  //     window.location= $(this).attr ("url");
-
-  //     });
+  // $(".card").click(function () {
+  //   window.location = $(this).attr("url");
+  // });
 
   // slide-up script
   $(".scroll-up-btn").click(function () {
@@ -48,7 +46,12 @@ $(document).ready(function () {
   });
 
   var typed = new Typed(".typing-2", {
-    strings: ["Software Engineer", "Developer", "Designer", "Student"],
+    strings: [
+      "Software Engineer",
+      "Developer",
+      "Designer",
+      "Student at UC Berkeley",
+    ],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true,
@@ -60,7 +63,7 @@ $(document).ready(function () {
     loop: true,
     autoplay: true,
     autoplayTimeOut: 2000,
-    autoplayHoverPause: true,
+    autoplayHoverPause: false,
     responsive: {
       0: {
         items: 1,
