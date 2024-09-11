@@ -1,6 +1,21 @@
 /*  import google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
 
+:root {
+  --primary-color: #28A745; /* A fresh, modern green */
+  --secondary-color: #155724; /* A dark forest green for contrast */
+  --background-dark: #1C1C1C; /* A nearly black background for dark sections */
+  --background-light: #F4F4F9; /* A light, neutral gray for light sections */
+  --text-light: #FFFFFF; /* Clean white for text on dark backgrounds */
+  --text-dark: #333333; /* Deep gray for text on light backgrounds */
+  --highlight-color: #FFB400; /* A warm golden yellow for highlights */
+  --scroll-thumb-color: #FF6347; /* A vibrant, warm red-orange for scrollbars */
+  --scroll-thumb-hover-color: #FF4500; /* A deeper orange-red for hover state */
+  --navbar-background: linear-gradient(to bottom, var(--secondary-color), var(--primary-color)); /* Gradient for the navbar */
+}
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -16,14 +31,13 @@ html {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: var(--background-light);
 }
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: var(--scroll-thumb-color);
 }
-
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: var(--scroll-thumb-hover-color);
 }
 
 /* all similar content styling codes */
@@ -70,7 +84,7 @@ section .title::before {
   left: 50%;
   width: 180px;
   height: 3px;
-  background: #111;
+  background: var(--background-dark);
   transform: translateX(-50%);
 }
 section .title::after {
@@ -78,9 +92,9 @@ section .title::after {
   bottom: -8px;
   left: 50%;
   font-size: 20px;
-  color: #a2c579;
+  color: var(--primary-color);
   padding: 0 5px;
-  background: #fff;
+  background: var(--text-light);
   transform: translateX(-50%);
 }
 
@@ -95,7 +109,7 @@ section .title::after {
 }
 .navbar.sticky {
   padding: 15px 0;
-  background: linear-gradient(to bottom, #78b75a, #a2c579);
+  background: var(--navbar-background);
 }
 .navbar .max-width {
   display: flex;
@@ -103,16 +117,16 @@ section .title::after {
   justify-content: space-between;
 }
 .navbar .logo a {
-  color: #fff;
+  color: var(--text-light);
   font-size: 35px;
   font-weight: 600;
 }
 .navbar .logo a span {
-  color: #a2c579;
+  color: var(--primary-color);
   transition: all 0.3s ease;
 }
 .navbar.sticky .logo a span {
-  color: #fff;
+  color: var(--text-light);
 }
 .navbar .menu li {
   list-style: none;
@@ -120,22 +134,22 @@ section .title::after {
 }
 .navbar .menu li a {
   display: block;
-  color: #fff;
+  color: var(--text-light);
   font-size: 18px;
   font-weight: 500;
   margin-left: 25px;
   transition: color 0.3s ease;
 }
 .navbar .menu li a:hover {
-  color: #a2c579;
+  color: var(--primary-color);
 }
 .navbar.sticky .menu li a:hover {
-  color: #fff;
+  color: var(--text-light);
 }
 
 /* menu btn styling */
 .menu-btn {
-  color: #fff;
+  color: var(--text-light);
   font-size: 23px;
   cursor: pointer;
   display: none;
@@ -144,12 +158,12 @@ section .title::after {
   position: fixed;
   height: 45px;
   width: 42px;
-  background: #a2c579;
+  background: var(--primary-color);
   right: 30px;
   bottom: 10px;
   text-align: center;
   line-height: 45px;
-  color: #fff;
+  color: var(--text-light);
   z-index: 9999;
   font-size: 30px;
   border-radius: 6px;
@@ -173,18 +187,16 @@ section .title::after {
   display: flex;
   background: url("images/banner2.jpg") no-repeat center;
   height: 100vh;
-  color: #fff;
+  color: var(--text-light);
   min-height: 500px;
   background-size: cover;
   background-attachment: fixed;
   font-family: "Ubuntu", sans-serif;
 }
+
 .home .max-width {
   width: 100%;
   display: flex;
-}
-.home .max-width .row {
-  margin-right: 0;
 }
 .home .home-content .text-1 {
   font-size: 27px;
@@ -199,29 +211,29 @@ section .title::after {
   margin: 5px 0;
 }
 .home .home-content .text-3 span {
-  color: #a2c579;
+  color: var(--primary-color);
   font-weight: 500;
 }
 .home .home-content a {
   display: inline-block;
-  background: #a2c579;
-  color: #fff;
+  background: var(--primary-color);
+  color: var(--text-light);
   font-size: 25px;
   padding: 12px 36px;
   margin-top: 20px;
   font-weight: 400;
   border-radius: 6px;
-  border: 2px solid #a2c579;
+  border: 2px solid var(--primary-color);
   transition: all 0.3s ease;
 }
 .home .home-content a:hover {
-  color: #a2c579;
+  color: var(--primary-color);
   background: none;
 }
 
 /* about section styling */
 .about .title::after {
-  content: "who i am";
+  content: "who I am";
 }
 .about .about-content .left {
   width: 45%;
@@ -243,46 +255,50 @@ section .title::after {
   margin-bottom: 10px;
 }
 .about .about-content .right .text span {
-  color: #a2c579;
+  color: var(--primary-color);
 }
 .about .about-content .right p {
   text-align: justify;
 }
 .about .about-content .right a {
   display: inline-block;
-  background: #a2c579;
-  color: #fff;
+  background: var(--primary-color);
+  color: var(--text-light);
   font-size: 20px;
   font-weight: 500;
   padding: 10px 30px;
   margin-top: 20px;
   border-radius: 6px;
-  border: 2px solid #a2c579;
+  border: 2px solid var(--primary-color);
   transition: all 0.3s ease;
 }
 .about .about-content .right a:hover {
-  color: #a2c579;
+  color: var(--primary-color);
   background: none;
 }
 
 /* projects section styling */
-
+.card a {
+  text-decoration: none;
+  color: inherit;
+}
 .projects,
 .courses {
-  color: #fff;
-  background: #111;
+  color: var(--text-light);
+  background: var(--background-dark);
 }
+
 .projects .title::before,
 .courses .title::before {
-  background: #fff;
+  background: var(--text-light);
 }
 
 .projects .text {
-  color: #a2c579;
+  color: var(--primary-color);
 }
 
 .projects .text:hover {
-  color: #a2c579;
+  color: var(--primary-color);
 }
 
 .projects .card {
@@ -291,8 +307,8 @@ section .title::after {
 
 .projects .title::after,
 .courses .title::after {
-  background: #111;
-  content: "what i worked on";
+  background: var(--background-dark);
+  content: "what I worked on";
 }
 
 .projects .serv-content .card {
@@ -304,25 +320,31 @@ section .title::after {
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
 .projects .serv-content .card:hover {
-  background: #a2c579;
+  background: var(--primary-color);
 }
+
 .projects .serv-content .card .box {
   transition: all 0.3s ease;
 }
+
 .projects .serv-content .card:hover .box {
   transform: scale(1.05);
 }
+
 .projects .serv-content .card i {
   font-size: 50px;
-  color: #a2c579;
+  color: var(--primary-color);
   transition: color 0.3s ease;
 }
+
 .projects .serv-content .card:hover i {
-  color: #fff;
+  color: var(--text-light);
 }
+
 .projects .serv-content .card:hover .text {
-  color: #fff;
+  color: var(--text-light);
 }
 .projects .serv-content .card .text {
   font-size: 25px;
@@ -333,7 +355,7 @@ section .title::after {
 /* skills section styling */
 
 .skills .title::after {
-  content: "what i know";
+  content: "what I know";
 }
 .skills .skills-content .column {
   width: calc(50% - 30px);
@@ -348,18 +370,18 @@ section .title::after {
 }
 .skills .skills-content .left a {
   display: inline-block;
-  background: #a2c579;
-  color: #fff;
+  background: var(--primary-color);
+  color: var(--text-light);
   font-size: 18px;
   font-weight: 500;
   padding: 8px 16px;
   margin-top: 20px;
   border-radius: 6px;
-  border: 2px solid #a2c579;
+  border: 2px solid var(--primary-color);
   transition: all 0.3s ease;
 }
 .skills .skills-content .left a:hover {
-  color: #a2c579;
+  color: var(--primary-color);
   background: none;
 }
 .skills .skills-content .right .bars {
@@ -387,7 +409,7 @@ section .title::after {
   height: 100%;
   left: 0;
   top: 0;
-  background: #a2c579;
+  background: var(--primary-color);
 }
 .skills-content .right .java::before {
   width: 90%;
@@ -407,9 +429,6 @@ section .title::after {
 .skills-content .right .js::before {
   width: 80%;
 }
-.skills-content .right .css::before {
-  width: 70%;
-}
 .skills-content .right .swift::before {
   width: 40%;
 }
@@ -418,7 +437,7 @@ section .title::after {
 }
 
 /* courses section styling */
-.courses .title::after {
+courses .title::after {
   content: "how I learned";
 }
 .courses .carousel .card {
@@ -430,7 +449,7 @@ section .title::after {
   transition: all 0.3s ease;
 }
 .courses .carousel .card:hover {
-  background: #a2c579;
+  background: var(--primary-color);
 }
 .courses .carousel .card .box {
   display: flex;
@@ -452,11 +471,11 @@ section .title::after {
   width: 150px;
   object-fit: cover;
   border-radius: 50%;
-  border: 5px solid #a2c579;
+  border: 5px solid var(--primary-color);
   transition: all 0.3s ease;
 }
 .courses .carousel .card:hover img {
-  border-color: #fff;
+  border-color: var(--text-light);
 }
 .owl-dots {
   text-align: center;
@@ -468,7 +487,7 @@ section .title::after {
   margin: 0 5px;
   outline: none !important;
   border-radius: 50%;
-  border: 2px solid #a2c579 !important;
+  border: 2px solid var(--primary-color) !important;
   transition: all 0.3s ease;
 }
 .owl-dot.active {
@@ -477,36 +496,21 @@ section .title::after {
 }
 .owl-dot.active,
 .owl-dot:hover {
-  background: #a2c579 !important;
+  background: var(--primary-color) !important;
 }
 
 /* contact section styling */
-/* .contact{
-    background: #111;
-}
-
-.contact .title {
-    color: white;
-} */
 
 .contact {
-  background-color: #111;
+  background-color: var(--background-dark);
 }
 .contact .title::after {
   content: "get in touch";
-  color: #a2c579;
-  background: #111;
+  color: var(--primary-color);
+  background: var(--background-dark);
 }
 .contact .contact-content .column {
   width: calc(50% - 30px);
-}
-/* .education .education-content .column{
-    width: calc(50% - 30px);
-} */
-
-.education .title::after {
-  content: "where i learned";
-  color: #a2c579;
 }
 .contact .contact-content .text {
   font-size: 20px;
@@ -531,14 +535,13 @@ section .title::after {
 }
 .contact .contact-content .row i {
   font-size: 25px;
-  color: #a2c579;
+  color: var(--primary-color);
 }
 .contact .contact-content .info .head {
   font-weight: 500;
 }
 .contact .contact-content .info .sub-title {
-  color: #333;
-  color: white;
+  color: var(--text-light);
 }
 .contact .right form .fields {
   display: flex;
@@ -581,7 +584,7 @@ section .title::after {
   align-items: center;
 }
 .right form .button-area button {
-  color: #fff;
+  color: var(--text-light);
   display: block;
   width: 160px !important;
   height: 45px;
@@ -591,15 +594,20 @@ section .title::after {
   border-radius: 6px;
   cursor: pointer;
   flex-wrap: nowrap;
-  background: #a2c579;
-  border: 2px solid #a2c579;
+  background: var(--primary-color);
+  border: 2px solid var(--primary-color);
   transition: all 0.3s ease;
 }
 .right form .button-area button:hover {
-  color: #a2c579;
+  color: var(--primary-color);
   background: none;
 }
 
+/* Education Section Styling */
+.education .title::after {
+  content: "where I learned";
+  color: var(--primary-color);
+}
 .education .education-content .right {
   width: 55%;
 }
@@ -609,25 +617,25 @@ section .title::after {
   margin-bottom: 10px;
 }
 .education .education-content .right .text span {
-  color: #a2c579;
+  color: var(--primary-color);
 }
 .education .education-content .right p {
   text-align: justify;
 }
 .education .education-content .right a {
   display: inline-block;
-  background: #a2c579;
-  color: #fff;
+  background: var(--primary-color);
+  color: var(--text-light);
   font-size: 20px;
   font-weight: 500;
   padding: 10px 30px;
   margin-top: 20px;
   border-radius: 6px;
-  border: 2px solid #a2c579;
+  border: 2px solid var(--primary-color);
   transition: all 0.3s ease;
 }
 .education .education-content .right a:hover {
-  color: #a2c579;
+  color: var(--primary-color);
   background: none;
 }
 
@@ -644,6 +652,7 @@ section .title::after {
     padding: 0 50px;
   }
 }
+
 @media (max-width: 947px) {
   .menu-btn {
     display: block;
@@ -658,7 +667,7 @@ section .title::after {
     width: 100%;
     left: -100%;
     top: 0;
-    background: #111;
+    background: var(--background-dark);
     text-align: center;
     padding-top: 80px;
     transition: all 0.3s ease;
