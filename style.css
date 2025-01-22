@@ -2,16 +2,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
 
 :root {
-  --primary-color: #28A745; /* A fresh, modern green */
-  --secondary-color: #155724; /* A dark forest green for contrast */
-  --background-dark: #1C1C1C; /* A nearly black background for dark sections */
-  --background-light: #F4F4F9; /* A light, neutral gray for light sections */
-  --text-light: #FFFFFF; /* Clean white for text on dark backgrounds */
-  --text-dark: #333333; /* Deep gray for text on light backgrounds */
-  --highlight-color: #FFB400; /* A warm golden yellow for highlights */
-  --scroll-thumb-color: #FF6347; /* A vibrant, warm red-orange for scrollbars */
-  --scroll-thumb-hover-color: #FF4500; /* A deeper orange-red for hover state */
-  --navbar-background: linear-gradient(to bottom, var(--secondary-color), var(--primary-color)); /* Gradient for the navbar */
+  --primary-color: #28A745;
+  /* A fresh, modern green */
+  --secondary-color: #155724;
+  /* A dark forest green for contrast */
+  --background-dark: #1C1C1C;
+  /* A nearly black background for dark sections */
+  --background-light: #F4F4F9;
+  /* A light, neutral gray for light sections */
+  --text-light: #FFFFFF;
+  /* Clean white for text on dark backgrounds */
+  --text-dark: #333333;
+  /* Deep gray for text on light backgrounds */
+  --highlight-color: #FFB400;
+  /* A warm golden yellow for highlights */
+  --scroll-thumb-color: #FF6347;
+  /* A vibrant, warm red-orange for scrollbars */
+  --scroll-thumb-hover-color: #FF4500;
+  /* A deeper orange-red for hover state */
+  --navbar-background: linear-gradient(to bottom, var(--secondary-color), var(--primary-color));
+  /* Gradient for the navbar */
 }
 
 
@@ -22,6 +32,7 @@
   box-sizing: border-box;
   text-decoration: none;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -30,12 +41,15 @@ html {
 ::-webkit-scrollbar {
   width: 10px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--background-light);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--scroll-thumb-color);
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--scroll-thumb-hover-color);
 }
@@ -44,11 +58,13 @@ html {
 section {
   padding: 100px 0;
 }
+
 .max-width {
   max-width: 1300px;
   padding: 0 80px;
   margin: auto;
 }
+
 .about,
 .projects,
 .skills,
@@ -57,6 +73,7 @@ section {
 .education {
   font-family: "Poppins", sans-serif;
 }
+
 .about .about-content,
 .projects .serv-content,
 .skills .skills-content,
@@ -68,6 +85,7 @@ section {
   align-items: center;
   justify-content: space-between;
 }
+
 section .title {
   position: relative;
   text-align: center;
@@ -77,6 +95,7 @@ section .title {
   padding-bottom: 20px;
   font-family: "Ubuntu", sans-serif;
 }
+
 section .title::before {
   content: "";
   position: absolute;
@@ -87,6 +106,7 @@ section .title::before {
   background: var(--background-dark);
   transform: translateX(-50%);
 }
+
 section .title::after {
   position: absolute;
   bottom: -8px;
@@ -107,31 +127,38 @@ section .title::after {
   font-family: "Ubuntu", sans-serif;
   transition: all 0.3s ease;
 }
+
 .navbar.sticky {
   padding: 15px 0;
   background: var(--navbar-background);
 }
+
 .navbar .max-width {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .navbar .logo a {
   color: var(--text-light);
   font-size: 35px;
   font-weight: 600;
 }
+
 .navbar .logo a span {
   color: var(--primary-color);
   transition: all 0.3s ease;
 }
+
 .navbar.sticky .logo a span {
   color: var(--text-light);
 }
+
 .navbar .menu li {
   list-style: none;
   display: inline-block;
 }
+
 .navbar .menu li a {
   display: block;
   color: var(--text-light);
@@ -140,9 +167,11 @@ section .title::after {
   margin-left: 25px;
   transition: color 0.3s ease;
 }
+
 .navbar .menu li a:hover {
   color: var(--primary-color);
 }
+
 .navbar.sticky .menu li a:hover {
   color: var(--text-light);
 }
@@ -154,6 +183,7 @@ section .title::after {
   cursor: pointer;
   display: none;
 }
+
 .scroll-up-btn {
   position: fixed;
   height: 45px;
@@ -173,11 +203,13 @@ section .title::after {
   pointer-events: none;
   transition: all 0.3s ease;
 }
+
 .scroll-up-btn.show {
   bottom: 30px;
   opacity: 1;
   pointer-events: auto;
 }
+
 .scroll-up-btn:hover {
   filter: brightness(90%);
 }
@@ -185,7 +217,7 @@ section .title::after {
 /* home section styling */
 .home {
   display: flex;
-  background: url("images/banner2.jpg") no-repeat center;
+  background: url("images/banner3.jpeg") no-repeat center;
   height: 100vh;
   color: var(--text-light);
   min-height: 500px;
@@ -198,22 +230,27 @@ section .title::after {
   width: 100%;
   display: flex;
 }
+
 .home .home-content .text-1 {
   font-size: 27px;
 }
+
 .home .home-content .text-2 {
   font-size: 75px;
   font-weight: 600;
   margin-left: -3px;
 }
+
 .home .home-content .text-3 {
   font-size: 40px;
   margin: 5px 0;
 }
+
 .home .home-content .text-3 span {
   color: var(--primary-color);
   font-weight: 500;
 }
+
 .home .home-content a {
   display: inline-block;
   background: var(--primary-color);
@@ -226,6 +263,7 @@ section .title::after {
   border: 2px solid var(--primary-color);
   transition: all 0.3s ease;
 }
+
 .home .home-content a:hover {
   color: var(--primary-color);
   background: none;
@@ -235,31 +273,38 @@ section .title::after {
 .about .title::after {
   content: "who I am";
 }
+
 .about .about-content .left {
   width: 45%;
 }
+
 .about .about-content .left img {
   height: 400px;
   width: 400px;
   object-fit: cover;
   border-radius: 6px;
 }
+
 .about .about-content .right,
 .education .education-content .right {
   width: 55%;
 }
+
 .about .about-content .right .text,
 .education .education-content .right .text {
   font-size: 25px;
   font-weight: 600;
   margin-bottom: 10px;
 }
+
 .about .about-content .right .text span {
   color: var(--primary-color);
 }
+
 .about .about-content .right p {
   text-align: justify;
 }
+
 .about .about-content .right a {
   display: inline-block;
   background: var(--primary-color);
@@ -272,6 +317,7 @@ section .title::after {
   border: 2px solid var(--primary-color);
   transition: all 0.3s ease;
 }
+
 .about .about-content .right a:hover {
   color: var(--primary-color);
   background: none;
@@ -282,6 +328,7 @@ section .title::after {
   text-decoration: none;
   color: inherit;
 }
+
 .projects,
 .courses {
   color: var(--text-light);
@@ -346,6 +393,7 @@ section .title::after {
 .projects .serv-content .card:hover .text {
   color: var(--text-light);
 }
+
 .projects .serv-content .card .text {
   font-size: 25px;
   font-weight: 500;
@@ -357,17 +405,21 @@ section .title::after {
 .skills .title::after {
   content: "what I know";
 }
+
 .skills .skills-content .column {
   width: calc(50% - 30px);
 }
+
 .skills .skills-content .left .text {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 10px;
 }
+
 .skills .skills-content .left p {
   text-align: justify;
 }
+
 .skills .skills-content .left a {
   display: inline-block;
   background: var(--primary-color);
@@ -380,29 +432,35 @@ section .title::after {
   border: 2px solid var(--primary-color);
   transition: all 0.3s ease;
 }
+
 .skills .skills-content .left a:hover {
   color: var(--primary-color);
   background: none;
 }
+
 .skills .skills-content .right .bars {
   margin-bottom: 15px;
 }
+
 .skills .skills-content .right .info {
   display: flex;
   margin-bottom: 5px;
   align-items: center;
   justify-content: space-between;
 }
+
 .skills .skills-content .right span {
   font-weight: 500;
   font-size: 18px;
 }
+
 .skills .skills-content .right .line {
   height: 5px;
   width: 100%;
   background: lightgrey;
   position: relative;
 }
+
 .skills .skills-content .right .line::before {
   content: "";
   position: absolute;
@@ -411,27 +469,35 @@ section .title::after {
   top: 0;
   background: var(--primary-color);
 }
+
 .skills-content .right .java::before {
   width: 90%;
 }
+
 .skills-content .right .python::before {
   width: 80%;
 }
+
 .skills-content .right .c::before {
   width: 70%;
 }
+
 .skills-content .right .html::before {
   width: 70%;
 }
+
 .skills-content .right .css::before {
   width: 70%;
 }
+
 .skills-content .right .js::before {
   width: 80%;
 }
+
 .skills-content .right .swift::before {
   width: 40%;
 }
+
 .skills-content .right .mysql::before {
   width: 60%;
 }
@@ -440,6 +506,7 @@ section .title::after {
 courses .title::after {
   content: "how I learned";
 }
+
 .courses .carousel .card {
   background: #222;
   border-radius: 6px;
@@ -448,9 +515,11 @@ courses .title::after {
   overflow: hidden;
   transition: all 0.3s ease;
 }
+
 .courses .carousel .card:hover {
   background: var(--primary-color);
 }
+
 .courses .carousel .card .box {
   display: flex;
   flex-direction: column;
@@ -458,14 +527,17 @@ courses .title::after {
   justify-content: center;
   transition: all 0.3s ease;
 }
+
 .courses .carousel .card:hover .box {
   transform: scale(1.05);
 }
+
 .courses .carousel .card .text {
   font-size: 25px;
   font-weight: 500;
   margin: 10px 0 7px 0;
 }
+
 .courses .carousel .card img {
   height: 150px;
   width: 150px;
@@ -474,13 +546,16 @@ courses .title::after {
   border: 5px solid var(--primary-color);
   transition: all 0.3s ease;
 }
+
 .courses .carousel .card:hover img {
   border-color: var(--text-light);
 }
+
 .owl-dots {
   text-align: center;
   margin-top: 20px;
 }
+
 .owl-dot {
   height: 13px;
   width: 13px;
@@ -490,10 +565,12 @@ courses .title::after {
   border: 2px solid var(--primary-color) !important;
   transition: all 0.3s ease;
 }
+
 .owl-dot.active {
   width: 35px;
   border-radius: 14px;
 }
+
 .owl-dot.active,
 .owl-dot:hover {
   background: var(--primary-color) !important;
@@ -504,61 +581,76 @@ courses .title::after {
 .contact {
   background-color: var(--background-dark);
 }
+
 .contact .title::after {
   content: "get in touch";
   color: var(--primary-color);
   background: var(--background-dark);
 }
+
 .contact .contact-content .column {
   width: calc(50% - 30px);
 }
+
 .contact .contact-content .text {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 10px;
   color: #b3b3b3;
 }
+
 .contact .contact-content .left p {
   text-align: justify;
 }
+
 .contact .contact-content .left .icons {
   margin: 10px 0;
 }
+
 .contact .contact-content .row {
   display: flex;
   height: 65px;
   align-items: center;
 }
+
 .contact .contact-content .row .info {
   margin-left: 30px;
   color: #b3b3b3;
 }
+
 .contact .contact-content .row i {
   font-size: 25px;
   color: var(--primary-color);
 }
+
 .contact .contact-content .info .head {
   font-weight: 500;
 }
+
 .contact .contact-content .info .sub-title {
   color: var(--text-light);
 }
+
 .contact .right form .fields {
   display: flex;
 }
+
 .contact .right form .field,
 .contact .right form .fields .field {
   height: 45px;
   width: 100%;
   margin-bottom: 15px;
 }
+
 .contact .right form .textarea {
   height: 80px;
   width: 100%;
 }
+
 .contact .right form .name {
   margin-right: 10px;
 }
+
 .contact .right form .field input,
 .contact .right form .textarea textarea {
   height: 100%;
@@ -571,18 +663,22 @@ courses .title::after {
   font-family: "Poppins", sans-serif;
   transition: all 0.3s ease;
 }
+
 .contact .right form .field input:focus,
 .contact .right form .textarea textarea:focus {
   border-color: #b3b3b3;
 }
+
 .contact .right form .textarea textarea {
   padding-top: 10px;
   resize: none;
 }
+
 .contact .right form .button-area {
   display: flex;
   align-items: center;
 }
+
 .right form .button-area button {
   color: var(--text-light);
   display: block;
@@ -598,6 +694,7 @@ courses .title::after {
   border: 2px solid var(--primary-color);
   transition: all 0.3s ease;
 }
+
 .right form .button-area button:hover {
   color: var(--primary-color);
   background: none;
@@ -608,20 +705,25 @@ courses .title::after {
   content: "where I learned";
   color: var(--primary-color);
 }
+
 .education .education-content .right {
   width: 55%;
 }
+
 .education .education-content .right .text {
   font-size: 25px;
   font-weight: 600;
   margin-bottom: 10px;
 }
+
 .education .education-content .right .text span {
   color: var(--primary-color);
 }
+
 .education .education-content .right p {
   text-align: justify;
 }
+
 .education .education-content .right a {
   display: inline-block;
   background: var(--primary-color);
@@ -634,6 +736,7 @@ courses .title::after {
   border: 2px solid var(--primary-color);
   transition: all 0.3s ease;
 }
+
 .education .education-content .right a:hover {
   color: var(--primary-color);
   background: none;
@@ -658,9 +761,11 @@ courses .title::after {
     display: block;
     z-index: 999;
   }
+
   .menu-btn i.active:before {
     content: "\f00d";
   }
+
   .navbar .menu {
     position: fixed;
     height: 100vh;
@@ -672,27 +777,34 @@ courses .title::after {
     padding-top: 80px;
     transition: all 0.3s ease;
   }
+
   .navbar .menu.active {
     left: 0;
   }
+
   .navbar .menu li {
     display: block;
   }
+
   .navbar .menu li a {
     display: inline-block;
     margin: 20px 0;
     font-size: 25px;
   }
+
   .home .home-content .text-2 {
     font-size: 70px;
   }
+
   .home .home-content .text-3 {
     font-size: 35px;
   }
+
   .home .home-content a {
     font-size: 23px;
     padding: 10px 30px;
   }
+
   .max-width {
     max-width: 930px;
   }
@@ -702,13 +814,16 @@ courses .title::after {
     justify-content: center;
     margin: 0 auto 60px;
   }
+
   .about .about-content .right {
     flex: 100%;
   }
+
   .projects .serv-content .card {
     width: calc(50% - 10px);
     margin-bottom: 20px;
   }
+
   .about .about-content .column,
   .skills .skills-content .column,
   .contact .contact-content .column,
@@ -722,15 +837,19 @@ courses .title::after {
   .max-width {
     padding: 0 23px;
   }
+
   .home .home-content .text-2 {
     font-size: 60px;
   }
+
   .home .home-content .text-3 {
     font-size: 32px;
   }
+
   .home .home-content a {
     font-size: 20px;
   }
+
   .projects .serv-content .card {
     width: 100%;
   }
@@ -740,24 +859,30 @@ courses .title::after {
   .home .home-content .text-2 {
     font-size: 50px;
   }
+
   .home .home-content .text-3 {
     font-size: 27px;
   }
+
   .about .about-content .right .text,
   .skills .skills-content .left .text,
   .education .education-content .right .text {
     font-size: 19px;
   }
+
   .contact .right form .fields {
     flex-direction: column;
   }
+
   .contact .right form .name,
   .contact .right form .email {
     margin: 0;
   }
+
   .right form .error-box {
     width: 150px;
   }
+
   .scroll-up-btn {
     right: 15px;
     bottom: 15px;
@@ -778,12 +903,14 @@ courses .title::after {
   padding-top: 100%;
   position: relative;
   border-radius: 50%;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Adding a subtle shadow for depth */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  /* Adding a subtle shadow for depth */
   transition: transform 0.3s;
 }
 
 .image-container:hover {
-  transform: scale(1.05); /* Zoom effect on hover */
+  transform: scale(1.05);
+  /* Zoom effect on hover */
 }
 
 .image-container img {
@@ -812,13 +939,18 @@ courses .title::after {
 }
 
 .details .coursework li {
-  margin-bottom: 1px; /* reduced spacing between bullets */
+  margin-bottom: 1px;
+  /* reduced spacing between bullets */
 }
 
 /* projects/Projects Section Styling */
 .projects .card img {
-  width: 300px; /* You can adjust this as per your requirement */
-  height: 300px; /* You can adjust this as per your requirement */
-  object-fit: cover; /* This ensures the images cover the set dimensions without warping */
-  margin: 0 auto; /* Centers the image horizontally if the card is wider */
+  width: 300px;
+  /* You can adjust this as per your requirement */
+  height: 300px;
+  /* You can adjust this as per your requirement */
+  object-fit: cover;
+  /* This ensures the images cover the set dimensions without warping */
+  margin: 0 auto;
+  /* Centers the image horizontally if the card is wider */
 }
